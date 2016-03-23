@@ -6,12 +6,18 @@ class RecipeTest < ActiveSupport::TestCase
   def setup
     # this is instance variable which will be avaliable to entire model
     # to crete private var don't use @
-    @recipe = Recipe.new(name: "chieken parm", summary: "this is the best chicken parm recipe ever",
+    @chef = Chef.create(chefname: "bob", email: "bob@example.com")
+    @recipe = @chef.recipes.build(name: "chicken parm", summary: "this is the best chicken parm recipe ever",
               description: "heat oil, add onions, add tomato sauce, add chicken, cook for 20 minutes.")   
   end
   
   test "recipe should be valid" do
     assert @recipe.valid?
+  end
+  
+  test "chef_id should be present" do
+   @recipe.chef_id = nil
+   assert_not @recipe.valid?
   end
   
   test "name should be present" do
