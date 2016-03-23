@@ -46,7 +46,7 @@ email: string
 
 - chefname must be present
 - chefname must be between 3 characters and less than 40 characters
-- emails bust be presetn
+- emails bust be present
 - email must be unique (since we'll use this for loing later)
 - email must be valid
 
