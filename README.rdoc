@@ -68,3 +68,12 @@ What we need to do:
 
 rails provides 'has secure password'
 
+Authentication updates:
+
+- Show recipe page -> Ability to edit/update only own recipe
+- Naviation partial -> Toggle Menu, restrict new
+- Restrict thumgs up and thumgs down action to logged_in user only
+- Recipe - update to current_user
+- Like - update to current_user
+- Before_action :require_user, except: [:show, :index]
+- Before_action :requjre_same_user for chefs, only: [:edit, :update]
