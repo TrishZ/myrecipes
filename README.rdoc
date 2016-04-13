@@ -6,21 +6,13 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
-
 * System dependencies
-
 * Configuration
-
 * Database creation
-
 * Database initialization
-
 * How to run the test suite
-
 * Services (job queues, cache servers, search engines, etc.)
-
 * Deployment instructions
-
 * ...
 
 
@@ -77,3 +69,15 @@ Authentication updates:
 - Like - update to current_user
 - Before_action :require_user, except: [:show, :index]
 - Before_action :requjre_same_user for chefs, only: [:edit, :update]
+
+Many to Many Association:
+1. We will implement using has_many through association
+2. Requires a join table
+3. One object/row in one table can be associated with multiple rows in a wnd table and vice-versa
+
+
+
+Common commands
+
+$ rake routes
+$ rake routes | grep Style
