@@ -13,6 +13,12 @@ class ApplicationController < ActionController::Base
     @current_user ||= Chef.find(session[:chef_id]) if session[:chef_id] 
   end
   
+  #begin
+  #  @current_user ||= Chef.find(session[:chef_id]) if session[:chef_id]
+  #  rescue ActiveRecord::RecordNotFound => e
+  #  @current_user = nil
+  #end 
+  
   #check if current user is logged in, returns boolean value
   def logged_in?
     !!current_user
